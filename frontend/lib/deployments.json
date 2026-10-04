@@ -1,0 +1,20 @@
+{
+  "46630": {
+    "chainId": 46630,
+    "pool": "0xE474514770C384Cde73AaF618B4118960a0292e8",
+    "registry": "0x44abd6eB6091e29AC99fAea73891ffDCa5f19944",
+    "startBlock": 127127868,
+    "usdc": "0x0000000000000000000000000000000000000000",
+    "usdg": "0x7E955252E15c84f5768B83c41a71F9eba181802F",
+    "verifier": "0xC8F99C4BbcE1Fab1Cf26B0Ef8756283D8a29252E"
+  },
+  "421614": {
+    "chainId": 421614,
+    "pool": "0xFfe0a95A1Ffd486e7f516791d5c63803a88C77b7",
+    "registry": "0xEC3671ECE0C62e6BB7a50A4d24b77FF86a4ca7B1",
+    "startBlock": 314630140,
+    "usdc": "0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d",
+    "usdg": "0xFFC95faa3d63Cde504a05B567C600B78C0b41892",
+    "verifier": "0xE474514770C384Cde73AaF618B4118960a0292e8"
+  }
+}
