@@ -1,0 +1,101 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * shadcn-style token structure, in strict black and white.
+ * Every colour is a neutral grey, so hierarchy comes from contrast and type:
+ * an elegant serif (Instrument Serif) for headings, a clean sans for everything else.
+ */
+:root,
+.dark {
+  --background: #000000;
+  --foreground: #fafafa;
+  --card: #0a0a0a;
+  --card-foreground: #fafafa;
+  --popover: #0a0a0a;
+  --popover-foreground: #fafafa;
+  --primary: #fafafa; /* white actions on black */
+  --primary-foreground: #000000;
+  --secondary: #161616;
+  --secondary-foreground: #fafafa;
+  --muted: #161616;
+  --muted-foreground: #a1a1a1;
+  --accent: #fafafa;
+  --accent-foreground: #000000;
+  --destructive: #f5f5f5; /* errors read as bright white-on-black with a border, not red */
+  --destructive-foreground: #000000;
+  --border: rgb(255 255 255 / 0.12);
+  --input: rgb(255 255 255 / 0.16);
+  --ring: #fafafa;
+  --lavender: #d4d4d4;
+  --steel: #8a8a8a;
+  --success: #fafafa;
+  --warning: #d4d4d4;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-lavender: var(--lavender);
+  --color-steel: var(--steel);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-heading: var(--font-heading-face), ui-serif, Georgia, serif;
+  --font-body: var(--font-body-face), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: rgb(255 255 255 / 0.25);
+  }
+}
+
+/* Instrument Serif ships a single weight; render it as designed instead of faux-bold. */
+.font-heading {
+  font-weight: 400 !important;
+  letter-spacing: -0.015em;
+}
+
+/* Landing ticker: two identical rows slide left by exactly one row width. */
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
