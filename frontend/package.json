@@ -5,7 +5,7 @@
   "scripts": {
     "sync": "node scripts/sync.mjs",
     "predev": "node scripts/sync.mjs",
-    "prebuild": "node scripts/sync.mjs",
+    "prebuild": "npm --prefix ../backend ci --omit=dev --no-audit --no-fund && node scripts/sync.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
