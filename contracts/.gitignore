@@ -1,0 +1,9 @@
+node_modules/
+out/
+cache/
+.env
+
+# Local and throwaway deployments
+broadcast/*/31337/
+broadcast/*/*/dry-run/
+deployments/fork-*.json

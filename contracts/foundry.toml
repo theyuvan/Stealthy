@@ -1,0 +1,26 @@
+[profile.default]
+src = "src"
+out = "out"
+# Libraries come from npm (`npm install` in this folder): no git submodules needed.
+libs = ["node_modules"]
+solc_version = "0.8.28"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 10_000
+remappings = [
+  "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+  "forge-std/=node_modules/forge-std/src/",
+]
+fs_permissions = [{ access = "read", path = "./test/fixtures" }, { access = "read-write", path = "./deployments" }]
+
+[profile.default.fuzz]
+runs = 512
+
+[rpc_endpoints]
+arbitrum_sepolia = "${ARBITRUM_SEPOLIA_RPC_URL}"
+robinhood_testnet = "${ROBINHOOD_TESTNET_RPC_URL}"
+arbitrum_one = "${ARBITRUM_ONE_RPC_URL}"
+
+[etherscan]
+arbitrum_sepolia = { key = "${ARBISCAN_API_KEY}", chain = 421614 }
+robinhood_testnet = { key = "blockscout", chain = 46630, url = "https://explorer.testnet.chain.robinhood.com/api/" }

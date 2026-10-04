@@ -1,0 +1,15 @@
+{
+  "name": "@stealthy/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stealthy Solidity contracts (Foundry). Solidity libraries are installed from npm.",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "5.4.0",
+    "forge-std": "github:foundry-rs/forge-std#v1.16.2"
+  },
+  "license": "MIT"
+}
