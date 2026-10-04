@@ -1,0 +1,8 @@
+node_modules/
+ptau/
+build/*.zkey
+build/*.r1cs
+build/*.sym
+build/stealth_withdraw_js/
+!build/verification_key.json
+*.log

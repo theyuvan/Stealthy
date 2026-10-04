@@ -1,0 +1,19 @@
+{
+  "name": "@stealthy/circuits",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Circom circuit + Groth16 trusted setup for Stealthy withdrawals",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "dependencies": {
+    "circomlib": "^2.0.5"
+  },
+  "devDependencies": {
+    "circom2": "^0.2.23",
+    "poseidon-lite": "^0.3.0",
+    "snarkjs": "^0.7.6"
+  },
+  "license": "MIT"
+}
